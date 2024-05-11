@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.mercadolivre.com</groupId>
 	<artifactId>notifications</artifactId>
-	<version>0.1.1</version>
+	<version>0.1.6</version>
 	<name>notifications</name>
 	<description>Serviço de envio de Notificações</description>
 	<properties>
@@ -78,5 +78,23 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.active>dev</spring.profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<spring.profiles.active>prod</spring.profiles.active>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>

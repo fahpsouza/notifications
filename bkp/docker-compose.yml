@@ -1,0 +1,36 @@
+version: '1.29.2'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - notifications-bridge
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/db_notifications
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=Hnkx@7701
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12
+    container_name: db
+    networks:
+      - notifications-bridge
+    environment:
+      POSTGRES_DB: db_notifications
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Hnkx@7701
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+
+networks:
+ notifications-bridge:
+  driver: bridge
