@@ -26,7 +26,7 @@ Antes de começar, verifique se você possui os seguintes requisitos:
 - Java 17 na sua máquina. 
 
 Veja instruções detalhadas no site oficial de 
-- [Postgresql](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+- [Postgresql](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) <br>
 - [Java](https://www.java.com/en/download/help/download_options.html)
 
 ## Clone o repositório para sua máquina local:
@@ -56,6 +56,6 @@ http
 Contato
 Fabio Henrique Piedade de Souza
 
-[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | <br>
-[Email](fabio.henrique.psouza@gmail.com) | <br>
+[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | 
+[Email](fabio.henrique.psouza@gmail.com) | 
 [Link do Projeto](https://github.com/fahpsouza/notifications)
