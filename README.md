@@ -13,8 +13,9 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - docker-compose.yml
 
 ## Arquitetura Proposta
+[Arquitetura Proposta](https://github.com/fahpsouza/notifications/blob/main/docs/Notifications%20App.pptx)
 
-## FLuxograma
+## Fluxograma
 [FLuxograma](https://github.com/fahpsouza/notifications/blob/main/docs/arquitetura_proposta.drawio)
 
 ## Pré-requisitos
