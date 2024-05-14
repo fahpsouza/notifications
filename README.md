@@ -50,10 +50,12 @@ Exemplos de como você pode utilizar as APIs criadas. Por exemplo:
 http
 ## Para Testar importe a Collection do Json em seu Postman na raiz do projeto
 - [Notifications MELI.postman_collection.json](https://github.com/fahpsouza/notifications/blob/main/Notifications%20MELI.postman_collection.json)
+- [/notification](https://github.com/fahpsouza/notifications/blob/main/docs/notification_endpoints.png)
+- [/api/users](https://github.com/fahpsouza/notifications/blob/main/docs/user_endpoints.png)
 
 Contato
 Fabio Henrique Piedade de Souza
 
-[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza)
-[Email](fabio.henrique.psouza@gmail.com)
+[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | 
+[Email](fabio.henrique.psouza@gmail.com) | 
 [Link do Projeto](https://github.com/fahpsouza/notifications)
