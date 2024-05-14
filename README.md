@@ -56,6 +56,6 @@ http
 Contato
 Fabio Henrique Piedade de Souza
 
-[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | 
-[Email](fabio.henrique.psouza@gmail.com) | 
+[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | <br>
+[Email](fabio.henrique.psouza@gmail.com) | <br>
 [Link do Projeto](https://github.com/fahpsouza/notifications)
