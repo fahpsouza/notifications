@@ -13,10 +13,12 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - docker-compose.yml
 
 ## Arquitetura Proposta
-[Arquitetura Proposta](https://github.com/fahpsouza/notifications/blob/main/docs/Notifications%20App.pptx)
+[Arquitetura Proposta](https://github.com/fahpsouza/notifications/blob/main/docs/Notifications%20App.pptx) <br>
 
 ## Fluxograma
-[FLuxograma](https://github.com/fahpsouza/notifications/blob/main/docs/arquitetura_proposta.drawio)
+[FLuxograma](https://github.com/fahpsouza/notifications/blob/main/docs/arquitetura_proposta.drawio)<br>
+
+![Fuxograma Image](https://github.com/fahpsouza/notifications/blob/main/docs/fluxograma.png "Fluxograma Image") <br>
 
 ## Pré-requisitos
 Antes de começar, verifique se você possui os seguintes requisitos:
