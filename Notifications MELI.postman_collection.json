@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "f43f93c9-286d-4aac-a3fb-4406062d7592",
+		"name": "Notifications MELI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1328409"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "/api/users/create-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"mariaEdna59\",\r\n  \"email\": \"mariaEdna59@gmail.com\",\r\n  \"acceptReceivingNotifications\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/users/create-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"users",
+								"create-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/users/unsubscribe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"nataliaAlves\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/users/unsubscribe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"users",
+								"unsubscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/users/all-users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "/notification/send",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"message\": \"Ola! Seu Iphone 15 Pro Max será entregue hoje ainda as 17hs\",\r\n  \"UserName\": \"nataliaAlves\",\r\n  \"productDescription\": \"Iphone 15 Pro Max\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/notification/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"notification",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/notification/isAlive",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8005/notification/isAlive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"notification",
+								"isAlive"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
