@@ -41,7 +41,7 @@ public class UsersController {
     @PostMapping("/unsubscribe")
     public ResponseEntity<String> unsubscribe(@RequestBody @Valid UserCreateDto dto) {
         try {
-            User user = userService.findUserByName(dto.name());
+            this.userService.findUserByName(dto.name());
             return ResponseEntity.ok("Unsubscribing from notifications successful!");
         } catch (ValidationException e) {
             return ResponseEntity.badRequest().body(e.getMessage());

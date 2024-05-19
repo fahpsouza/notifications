@@ -7,8 +7,11 @@ public record ReceiveNotificationDto(
         String message,
 
         @NotBlank
-        String UserName,
+        String userName,
 
         @NotBlank
-        String productDescription) {
+        String email,
+
+        @NotBlank
+        String scheduledTime) {
 }

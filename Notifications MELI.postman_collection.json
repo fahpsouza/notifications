@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"mariaEdna59\",\r\n  \"email\": \"mariaEdna59@gmail.com\",\r\n  \"acceptReceivingNotifications\": true\r\n}",
+							"raw": "{\r\n  \"name\": \"elianeRondon78\",\r\n  \"email\": \"elianeRondon78@gmail.com\",\r\n  \"acceptReceivingNotifications\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,12 +24,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8006/api/users/create-user",
-							"protocol": "http",
+							"raw": "{{url}}{{porta-local}}/api/users/create-user",
 							"host": [
-								"localhost"
+								"{{url}}{{porta-local}}"
 							],
-							"port": "8006",
 							"path": [
 								"api",
 								"users",
@@ -46,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"nataliaAlves\"\r\n}",
+							"raw": "{\r\n    \"name\": \"elianeRondon78\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -54,12 +52,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8006/api/users/unsubscribe",
-							"protocol": "http",
+							"raw": "{{url}}{{porta-local}}/api/users/unsubscribe",
 							"host": [
-								"localhost"
+								"{{url}}{{porta-local}}"
 							],
-							"port": "8006",
 							"path": [
 								"api",
 								"users",
@@ -75,12 +71,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8006/api/users",
-							"protocol": "http",
+							"raw": "{{url}}{{porta-local}}/api/users",
 							"host": [
-								"localhost"
+								"{{url}}{{porta-local}}"
 							],
-							"port": "8006",
 							"path": [
 								"api",
 								"users"
@@ -101,7 +95,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"message\": \"Ola! Seu Iphone 15 Pro Max será entregue hoje ainda as 17hs\",\r\n  \"UserName\": \"nataliaAlves\",\r\n  \"productDescription\": \"Iphone 15 Pro Max\"\r\n}",
+							"raw": "{\r\n  \"message\": \"Ola! Seu Iphone 15 Pro Max será entregue hoje ainda as 17hs\",\r\n  \"UserName\": \"elianeRondon78\",\r\n  \"productDescription\": \"Iphone 15 Pro Max\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -109,12 +103,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8006/notification/send",
-							"protocol": "http",
+							"raw": "{{url}}{{porta-local}}/notification/send",
 							"host": [
-								"localhost"
+								"{{url}}{{porta-local}}"
 							],
-							"port": "8006",
 							"path": [
 								"notification",
 								"send"
@@ -129,12 +121,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8005/notification/isAlive",
-							"protocol": "http",
+							"raw": "{{url}}{{porta-local}}/notification/isAlive",
 							"host": [
-								"localhost"
+								"{{url}}{{porta-local}}"
 							],
-							"port": "8005",
 							"path": [
 								"notification",
 								"isAlive"
@@ -144,6 +134,12 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "porta-local",
+			"value": "porta-local"
 		}
 	]
 }
