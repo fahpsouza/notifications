@@ -4,5 +4,11 @@ import jakarta.validation.constraints.NotNull;
 
 public record UserCreateDto(
         @NotNull
-        String name) {
+        String name,
+
+        @NotNull
+        String email,
+
+        @NotNull
+        Boolean acceptReceivingNotifications) {
 }

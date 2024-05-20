@@ -9,7 +9,7 @@ public class RabbitMQConfig {
 
     @Bean
     public Queue notificationQueue() {
-        return new Queue("notificationQueue", true);
+        return new Queue("sendNotificationsToWebfluxApi", true);
     }
 
 //    @Bean

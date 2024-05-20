@@ -10,6 +10,5 @@ import lombok.*;
 public class SendNotificationToWebfluxDto {
         private String message;
         private String notificationType;
-        private String userId;
-
+        private Long userId;
 }

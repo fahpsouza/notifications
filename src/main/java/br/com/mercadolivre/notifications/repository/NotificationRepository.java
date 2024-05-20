@@ -8,9 +8,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 public interface NotificationRepository extends JpaRepository<Notification, Long> {
     List<Notification> findAll();
+
+    Optional<Notification> findById(Long id);
 
     List<Notification> findByEmailAndScheduledTimeBeforeAndStatus(String recipient, LocalDateTime beforeTime, String status);
 
@@ -20,7 +23,7 @@ public interface NotificationRepository extends JpaRepository<Notification, Long
 
     @Modifying
     @Transactional
-    @Query("UPDATE Notification n SET n.message = :message, n.userName = :userName, n.email = :email, n.status = :status WHERE n.id = :id")
-    int updateNotification(Long id, String message, String userName, String email, String status);
+    @Query("UPDATE Notification n SET n.status = :status WHERE n.id = :id")
+    int updateNotification(Long id, String status);
 
 }
