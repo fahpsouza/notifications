@@ -8,12 +8,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.*;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.RestTemplate;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -76,7 +73,8 @@ public class NotificationService {
     }
 
 
-    public void sendNotificationNew(SendNotificationToWebfluxDto dto) {
+    public int sendNotificationNew(SendNotificationToWebfluxDto dto) {
+        int responseCode = 0;
         try {
             // Criação da URL
             String apiUrl = "http://localhost:8352/notification/receipt";
@@ -94,7 +92,7 @@ public class NotificationService {
             }
 
             // Verificando o código de resposta
-            int responseCode = connection.getResponseCode();
+            responseCode = connection.getResponseCode();
             System.out.println("Response Code: " + responseCode);
 
             // Lendo a resposta da API
@@ -107,8 +105,8 @@ public class NotificationService {
                     content.append(inputLine);
                 }
                 in.close();
-                System.out.println("Response: " + content.toString());
-                System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+                System.out.println("Response: " + content.toString() + " \n");
+                System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------");
 //                Notification notification = notificationRepository.findById(dto)
             } else {
                 System.out.println("POST request failed");
@@ -116,5 +114,6 @@ public class NotificationService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return responseCode;
     }
 }

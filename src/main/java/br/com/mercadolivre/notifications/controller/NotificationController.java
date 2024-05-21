@@ -18,7 +18,7 @@ public class NotificationController {
     @Autowired
     private NotificationService notificationService;
 
-    @GetMapping("isAlive")
+    @GetMapping("/isAlive")
     public ResponseEntity<String> isAlive() {
         try {
             return ResponseEntity.ok("The application is UP and Running! Local");

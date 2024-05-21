@@ -2,10 +2,11 @@ package br.com.mercadolivre.notifications.service;
 
 import br.com.mercadolivre.notifications.dto.SendNotificationToWebfluxDto;
 import br.com.mercadolivre.notifications.model.Notification;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import java.net.HttpURLConnection;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -24,7 +25,9 @@ public class ScheduledNotificationSender {
         System.out.println("Quantidade de notificações Pendentes: " + notificationsList.size());
         if (!notificationsList.isEmpty()) {
             for (Notification notification : notificationsList) {
-                sendNotification(notification);
+                if (!sendNotification(notification)){
+                    break;
+                }
             }
         } else {
             System.out.println("Lista vazia!");
@@ -32,11 +35,16 @@ public class ScheduledNotificationSender {
 
     }
 
-    private void sendNotification(Notification notification) {
-        notificationService.sendNotificationNew(createDtoNotification(notification));
-        notification.setStatus("SENT");
-        notification.setSentTime(LocalDateTime.now());
-        notificationService.saveNotification(notification);
+    private Boolean sendNotification(Notification notification) {
+        int responseCode = notificationService.sendNotificationNew(createDtoNotification(notification));
+        if (responseCode == HttpStatus.CREATED.value()){
+            notification.setStatus("SENT");
+            notification.setSentTime(LocalDateTime.now());
+            notificationService.saveNotification(notification);
+            return true;
+        }
+
+        return false;
     }
 
     private SendNotificationToWebfluxDto createDtoNotification(Notification notification){

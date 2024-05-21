@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.mercadolivre.com</groupId>
 	<artifactId>notifications</artifactId>
-	<version>0.1.8</version>
+	<version>0.2.0</version>
 	<name>notifications</name>
 	<description>Serviço de envio de Notificações</description>
 	<properties>
